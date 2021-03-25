@@ -6,13 +6,15 @@ from .market1501 import Market1501
 from .msmt17 import MSMT17
 from .personx import personX
 from .personxval import personXval
+from .itv import Common
 
 __factory = {
     'market1501': Market1501,
     'dukemtmc': DukeMTMC,
     'msmt17': MSMT17,
     'personx': personX,
-    'personxval': personXval
+    'personxval': personXval,
+    'common': Common
 }
 
 
@@ -23,7 +25,6 @@ def names():
 def create(name, root, l=1, *args, **kwargs):
     """
     Create a dataset instance.
-
     Parameters
     ----------
     name : str
